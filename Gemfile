@@ -2,21 +2,13 @@ source 'https://rubygems.org'
 
 gem 'rake'
 gem 'rack'
+gem 'require_all'
 
 gem 'sinatra'
 gem 'sinatra-contrib'
-gem 'json'
-gem 'sqlite3'
-gem 'thin'
-gem 'dotenv'
 
+gem 'sqlite3'
 gem 'sequel'
 
-group :development do
-    gem 'foreman'
-end
+gem 'puma'
 
-group :test do
-    gem 'rspec', :require => 'spec'
-    gem 'rack-test'
-end

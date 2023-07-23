@@ -1,11 +1,12 @@
-require 'sinatra'
-require 'sinatra/reloader'  
-require './environment'
+
+require_all './models'
+
 configure :development do
     register Sinatra::Reloader
 end
-get '/' do
 
+get '/' do
+    @users = User.all
     erb :index, :layout => :layout
 end
 
